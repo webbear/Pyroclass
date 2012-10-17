@@ -29,9 +29,7 @@ class Plugin_Pyroclass extends Plugin
 			$is_home = 'homepage';
 			$body_class .= $is_home;
 		} 
-
-		else 
-
+		else
 		{
 			$segs = array();
 			$segs = $this->uri->segment_array();
@@ -56,35 +54,33 @@ class Plugin_Pyroclass extends Plugin
 		{
 			 $ua_class='safari' . ' safari'.$version_small;
 		}
-
 		elseif ($browser == "internet explorer") 
 		{
 
 			$ua_class = 'ie ' . 'ie'.$version .' ie'.$version_small;
 		}
-
-		elseif ($browser == "firefox") {
+		elseif ($browser == "firefox")
+		{
 			$ua_class = 'firefox' . ' firefox' . $version_small;
 		}
-		elseif ($browser == "opera") {
+		elseif ($browser == "opera")
+		{
 			$ua_class = 'opera' .' opera'. $version_small;
 		}
-		elseif ($browser == "chrome") {
+		elseif ($browser == "chrome")
+		{
 			$ua_class = 'chrome' .' chrome'. $version_small;
 		}
-
 		elseif ($browser == "gecko") {
 			$ua_class = 'gecko' .' gecko'. $version_small;
 		}
-
 		else
 		{
 			$ua_class = 'undefined-ua';
 		}
-
+		// classe glued togehter
 		$body_class .= ' '.$ua_class;
-	
-
+		
 		return $body_class;
 		
 	}
